@@ -1,9 +1,10 @@
 package Clases;
 
-public abstract class Producto implements DatosProductos {
-    public String codigo;
+public  class Producto /*implements DatosProductos */{
+    public String idproducto;
+    public String codigopro;
     private String nompro;
-    private float precio;
+    private  double precio;
     private String tipopro;
     private int cantidad;
     
@@ -11,20 +12,30 @@ public abstract class Producto implements DatosProductos {
          
     }
         
-    public Producto(String codigo,String nompro,String tipopro, int cantidad,float precio){
+    public Producto(String idproducto, String codigopro,String nompro,String tipopro, int cantidad,double precio){
+        this.idproducto=idproducto;
         this.cantidad=cantidad;
-        this.codigo=codigo;
+        this.codigopro=codigopro;
         this.nompro=nompro;
         this.precio=precio;
         this.tipopro=tipopro;            
      }
 
-    public String getCodigo() {
-        return codigo;
+    public String getIdproducto() {
+        return idproducto;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setIdproducto(String idproducto) {
+        this.idproducto = idproducto;
+    }
+    
+
+    public String getCodigopro() {
+        return codigopro;
+    }
+
+    public void setCodigopro(String codigopro) {
+        this.codigopro = codigopro;
     }
 
     public String getNombre() {
@@ -35,11 +46,11 @@ public abstract class Producto implements DatosProductos {
         this.nompro = nompro;
     }
 
-    public float getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
@@ -59,7 +70,7 @@ public abstract class Producto implements DatosProductos {
         this.cantidad = cantidad;
     }
     
-    public abstract void datosPoducto();
+    //public void datosPoducto();
     
     
     

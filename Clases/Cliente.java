@@ -10,6 +10,7 @@ package Clases;
  * @author HEYRY
  */
 public class Cliente {
+public String idcliente;    
 public String Nombre;
 public String Apellido;
 public String Nit;
@@ -18,18 +19,25 @@ public String Telefono;
 public String Email;
 
 public Cliente(){}
-public Cliente(String Nombre,String Apellido, String Nit, String Direccion, String Telefono, String Email){
+public Cliente(String idcliente, String Nombre,String Apellido, String Nit, String Direccion, String Telefono, String Email){
+this.idcliente=idcliente;
+this.Nombre=Nombre;
+this.Apellido=Apellido;
+this.Nit=Nit;
+this.Direccion=Direccion;
+this.Telefono=Telefono;
+this.Email=Email;
 }
 
 
-    public int getId() {
-        return id;
+    public String getId() {
+        return idcliente;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(String idcliente) {
+        this.idcliente = idcliente;
     }
-int id;
+int idcliene;
 
 
 

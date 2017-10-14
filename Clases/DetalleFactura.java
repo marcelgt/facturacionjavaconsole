@@ -3,6 +3,7 @@ package Clases;
 import java.util.Date;
 
 public class  DetalleFactura extends Factura implements DatosProductos { //implements Producto
+int iddetallefactura;
 int cantidad;
 double precioU;
 double subtotal;
@@ -12,27 +13,42 @@ double subtotal;
 public DetalleFactura(){}
 
 public DetalleFactura(
+                      int iddetallefactura,
                       String tipo,
-                      int NumFac, 
+                      int NumeroFactura, 
                       Date fecha,
+                      String idcliente,
                       String Nombre,
                       String Apellido,
                       String Nit,
                       String Direccion,
                       String Telefono,
                       String Email,
+                      int idfactura,
                       int cantidad,
-                      double precioU,
-                      double subtotal){
+                      double precioU
+                      ){
 
-super(tipo,NumFac,fecha, Nombre,Apellido, Nit,  Direccion, Telefono, Email );
+super(idfactura, tipo,NumeroFactura,fecha,idcliente, Nombre,Apellido, Nit,  Direccion, Telefono, Email );
+
+this.iddetallefactura=iddetallefactura;
 this.cantidad=cantidad;
 this.precioU= precioU;
 this.subtotal=subtotal;
 
 
+
 }
-         public int getCantidad() {
+
+    public int getIddetallefactura() {
+        return iddetallefactura;
+    }
+
+    public void setIddetallefactura(int iddetallefactura) {
+        this.iddetallefactura = iddetallefactura;
+    }
+
+    public int getCantidad() {
         return cantidad;
     }
 
